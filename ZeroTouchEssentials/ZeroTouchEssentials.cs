@@ -8,9 +8,9 @@ using Autodesk.DesignScript.Interfaces;
 using Autodesk.DesignScript.Geometry;
 
 ///////////////////////////////////////////////////////////////////
-/// NOTE: This project requires references to the ProtoInterface
-/// and ProtoGeometry DLLs. These are found in the Dynamo install
-/// directory.
+/// NOTE: This project requires references to the DynamoServices
+/// and ProtoGeometry DLLs. These can be found in the latest
+/// ZeroTouch and DynamoServices Nuget packages.
 ///////////////////////////////////////////////////////////////////
 
 namespace ZeroTouchEssentials
