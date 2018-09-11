@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" Condition=" Exists('$(SolutionDir)Config/user_local.props') ">
+    <Import Project="$(SolutionDir)Config/user_local.props" />
+  </ImportGroup>
   <PropertyGroup>
-	<DynamoZeroTouchPath Condition = "'$(DynamoZeroTouchPath)' == ''">$(SolutionDir)\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.0.0-beta3\lib\net45</DynamoZeroTouchPath>
-	<DynamoServicesPath Condition =  "'$(DynamoServicesPath)' == ''">$(SolutionDir)\packages\DynamoVisualProgramming.DynamoServices.1.0.0-beta3\lib\net45</DynamoServicesPath>
+   <DynamoServicesPath Condition = "!Exists('$(DynamoServicesPath)')">$(SolutionDir)\packages\DynamoVisualProgramming.DynamoServices.1.0.0-beta3\lib\net45</DynamoServicesPath>
+	<DynamoZeroTouchPath Condition = "!Exists('$(DynamoZeroTouchPath)')">$(SolutionDir)\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.0.0-beta3\lib\net45</DynamoZeroTouchPath>
   </PropertyGroup>
 </Project>
